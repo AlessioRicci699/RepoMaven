@@ -1,10 +1,13 @@
-
 public class Calcolatrice 
 {
-	
-	int Somma(int a, int b)
+	public double somma(double...addendi)
 	{
-		int c = a+b;
-		return c;
+		double s = 0;
+		for(double addendo : addendi)
+		{
+			s = s + Math.abs(addendo);
+		}
+		
+		return s;
 	}
 }

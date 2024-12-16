@@ -1,22 +1,26 @@
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Assert;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import junit.framework.Assert;
-
-class TestCalcolatrice {
-
+public class TestCalcolatrice 
+{
 	@Test
-	void testSomma() {
+	public void testSomma() 
+	{
 		Calcolatrice c = new Calcolatrice();
-		double res = c.Somma(5, 6);
-		Assert.assertEquals(11,res,0);
+		
+		double res = c.somma(5,6);
+		
+		Assert.assertEquals(11, res, 0);
 	}
 	
-	void testSomma2() {
+	@Test
+	public void testSomma2() 
+	{
 		Calcolatrice c = new Calcolatrice();
-		double res = c.Somma(5, 0);
-		Assert.assertEquals(5,res,0);
+		
+		double res = c.somma(6,6);
+		
+		Assert.assertEquals(12, res, 0);
 	}
-
 }
